@@ -16,7 +16,8 @@ Instead of relying on passive reading or AI code generation, this website is bui
 
 ```text 
 CodingNotes/ 
-├── index.html # Homepage with site index and learning progress ├── style.css # Global stylesheet, design system, and component rules 
+├── index.html # Homepage with site index and learning progress
+├── style.css # Global stylesheet, design system, and component rules 
 ├── assets/ # Images, diagrams, and static media 
 └── pages/ # Dedicated topic pages 
     ├── html.html # HTML5 semantics, document structure, forms &amp; SEO 
