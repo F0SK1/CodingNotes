@@ -15,7 +15,7 @@ Instead of relying on passive reading or AI code generation, this website is bui
 ## 📂 Project Structure 
 
 ```text 
-apuntes-frontend/ 
+CodingNotes/ 
 ├── index.html # Homepage with site index and learning progress ├── style.css # Global stylesheet, design system, and component rules 
 ├── assets/ # Images, diagrams, and static media 
 └── pages/ # Dedicated topic pages 
