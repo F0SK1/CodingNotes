@@ -1,25 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coding Notes</title>
+    <title data-i18n="homeTitle">Notas de programación</title>
     <link rel="stylesheet" href="style.css">
+    <script src="assets/language.js" defer></script>
 </head>
 <body>
     <nav>
-        <h1>Coding Notes. </h1>
+        <h1 data-i18n="siteName">Notas de programación</h1>
 
         <span class="nav-links">
-            <a>Home</a>
+            <a class="nav-link" href="index.html" data-i18n="home">Inicio</a>
             <details open>
-                <summary>Categories</summary>
-                <details class="sub-menu"open>
-                    <summary>Front End</summary>
+                <summary data-i18n="categories">Categorías</summary>
+                <details class="sub-menu" open>
+                    <summary data-i18n="frontEnd">Desarrollo Front-end</summary>
                     <ul>
-                        <li><a href="html.html">HTML</a></li>
-                        <li><a href="css.html">CSS</a></li>
-                        <li><a href="javascript.html">JavaScript</a></li>
+                        <li><a href="pages/html.html">HTML</a></li>
+                        <li><a href="pages/css.html">CSS</a></li>
+                        <li><a href="pages/js.html">JavaScript</a></li>
                     </ul>
                 </details>
             </details>
@@ -27,11 +28,47 @@
     </nav>
 
     <main>
+        <button class="language-toggle" type="button" data-language-toggle>English</button>
+        <section class="intro">
+            <p class="intro-eyebrow" data-i18n="introEyebrow">Un espacio para aprender, crear y experimentar</p>
+            <h2 data-i18n="introHeading">De la primera etiqueta a una página que cobra vida.</h2>
+            <p class="intro-lead" data-i18n="introLead">Bienvenido a mis apuntes de desarrollo front-end: una guía personal, hecha paso a paso, para entender cómo se construye la web.</p>
 
+            <div class="intro-actions">
+                <a class="intro-button" href="pages/html.html" data-i18n="exploreNotes">Explorar los apuntes <span aria-hidden="true">→</span></a>
+                <span class="intro-note" data-i18n="introNote">Sin atajos: aprender haciendo.</span>
+            </div>
+
+            <div class="intro-cards">
+                <article class="intro-card">
+                    <span class="card-number" data-i18n="htmlCardLabel">01 / ESTRUCTURA</span>
+                    <h3 data-i18n="htmlCardTitle">Dale forma a la web</h3>
+                    <p data-i18n="htmlCardText">HTML organiza el contenido y le da significado a cada parte de una página.</p>
+                    <a href="pages/html.html" data-i18n="htmlCardLink">Explorar HTML →</a>
+                </article>
+                <article class="intro-card">
+                    <span class="card-number" data-i18n="cssCardLabel">02 / ESTILO</span>
+                    <h3 data-i18n="cssCardTitle">Haz que destaque</h3>
+                    <p data-i18n="cssCardText">CSS transforma esa estructura con color, diseño y movimiento.</p>
+                    <a href="pages/css.html" data-i18n="cssCardLink">Explorar CSS →</a>
+                </article>
+                <article class="intro-card">
+                    <span class="card-number" data-i18n="jsCardLabel">03 / INTERACCIÓN</span>
+                    <h3 data-i18n="jsCardTitle">Ponla en movimiento</h3>
+                    <p data-i18n="jsCardText">JavaScript añade comportamiento y hace que las páginas respondan.</p>
+                    <a href="pages/js.html" data-i18n="jsCardLink">Explorar JavaScript →</a>
+                </article>
+            </div>
+
+            <p class="intro-signoff" data-i18n="introSignoff">Apuntes reales de un recorrido en marcha. Abre una categoría y empecemos.</p>
+        </section>
     </main>
 
     <footer>
-
+        <div class="footer-inner">
+            <p data-i18n="footerNote">Hecho a mano con HTML, CSS y JavaScript. Un proyecto de aprendizaje continuo.</p>
+            <a href="https://github.com/F0SK1/CodingNotes" target="_blank" rel="noopener noreferrer" data-i18n="footerGithub">Ver el proyecto en GitHub ↗</a>
+        </div>
     </footer>
 </body>
 </html>

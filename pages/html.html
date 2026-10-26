@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Aprende la estructura básica de un documento HTML y el propósito de las etiquetas semánticas.">
+    <title data-i18n="htmlTitle">Apuntes de HTML | Coding Notes</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="../assets/language.js" defer></script>
+</head>
+<body>
+    <nav>
+        <h1 data-i18n="htmlTitle">Apuntes de HTML | Coding Notes</h1>
+
+        <span class="nav-links">
+            <a class="nav-link" href="../index.html" data-i18n="home">Inicio</a>
+            <details open>
+                <summary data-i18n="categories">Categorías</summary>
+                <details class="sub-menu" open>
+                    <summary data-i18n="frontEnd">Desarrollo Front-end</summary>
+                    <ul>
+                        <li><a href="css.html">CSS</a></li>
+                        <li><a href="js.html">JavaScript</a></li>
+                    </ul>
+                </details>
+            </details>
+        </span>
+    </nav>
+
+    <main>
+        <button class="language-toggle" type="button" data-language-toggle>English</button>
+        <article class="notes-page">
+            <header class="notes-header">
+                <p class="intro-eyebrow" data-i18n="htmlEyebrow">01 · FUNDAMENTOS DE HTML</p>
+                <h2 data-i18n="htmlHeading">HTML: estructura con significado</h2>
+                <p class="intro-lead" data-i18n="htmlIntro">Antes de pensar en colores o animaciones, una página necesita una estructura clara. HTML organiza el contenido y explica qué papel cumple cada parte.</p>
+                <div class="notes-toc" role="navigation" aria-label="Contenido de esta página" data-i18n-aria-label="htmlTocLabel">
+                    <a href="#document" data-i18n="htmlTocDocument">Documento básico</a>
+                    <a href="#semantics" data-i18n="htmlTocSemantics">HTML semántico</a>
+                    <a href="#practice" data-i18n="htmlTocPractice">Ponlo en práctica</a>
+                </div>
+            </header>
+
+            <section class="note-section" id="document">
+                <p class="section-kicker" data-i18n="htmlSectionOne">01 / EL PUNTO DE PARTIDA</p>
+                <h3 data-i18n="htmlDocumentHeading">La anatomía de un documento HTML</h3>
+                <p data-i18n="htmlDocumentText">Un documento HTML empieza declarando que usa HTML5. Después, el elemento <code>&lt;html&gt;</code> contiene toda la página; <code>&lt;head&gt;</code> guarda información para el navegador y <code>&lt;body&gt;</code> contiene lo que verá la persona.</p>
+
+                <div class="example-grid">
+                    <div class="code-panel">
+                        <h4 data-i18n="codeLabel">Código</h4>
+                        <pre><code data-i18n="htmlDocumentExample">&lt;!doctype html&gt;
+&lt;html lang="es"&gt;
+&lt;head&gt;
+  &lt;meta charset="utf-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+  &lt;title&gt;Mi primera página&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;Hola, web&lt;/h1&gt;
+  &lt;p&gt;Esta es mi primera página.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                    </div>
+                    <div class="render-panel">
+                        <h4 data-i18n="renderedLabel">Resultado en la página</h4>
+                        <div class="rendered-example">
+                            <h1 data-i18n="htmlRenderedHeading">Hola, web</h1>
+                            <p data-i18n="htmlRenderedText">Esta es mi primera página.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <ul class="concept-list">
+                    <li data-i18n="htmlConceptDoctype"><code>&lt;!doctype html&gt;</code> indica al navegador que interprete el documento con los estándares actuales.</li>
+                    <li data-i18n="htmlConceptLanguage"><code>lang="es"</code> identifica el idioma principal, lo que ayuda a lectores de pantalla y otras herramientas.</li>
+                    <li data-i18n="htmlConceptEncoding"><code>meta charset="utf-8"</code> permite mostrar correctamente caracteres como ñ y tildes.</li>
+                    <li data-i18n="htmlConceptViewport"><code>meta name="viewport"</code> ayuda a que la página se adapte a pantallas pequeñas.</li>
+                </ul>
+            </section>
+
+            <section class="note-section" id="semantics">
+                <p class="section-kicker" data-i18n="htmlSectionTwo">02 / DARLE SENTIDO</p>
+                <h3 data-i18n="htmlSemanticsHeading">Elige etiquetas por lo que significan</h3>
+                <p data-i18n="htmlSemanticsText">Las etiquetas semánticas describen el propósito de su contenido. Así, el documento resulta más fácil de entender para otras personas, navegadores y tecnologías de asistencia.</p>
+
+                <div class="semantic-layout">
+                    <div class="code-panel">
+                        <h4 data-i18n="semanticCodeLabel">Un artículo semántico</h4>
+                        <pre><code data-i18n="htmlSemanticExample">&lt;article&gt;
+  &lt;h4&gt;Una idea, bien estructurada&lt;/h4&gt;
+  &lt;p&gt;El nombre de la etiqueta describe
+    el contenido que contiene.&lt;/p&gt;
+&lt;/article&gt;</code></pre>
+                    </div>
+                    <article class="rendered-example semantic-card">
+                        <span class="card-number" data-i18n="semanticPreviewLabel">VISTA PREVIA</span>
+                        <h4 data-i18n="semanticRenderedHeading">Una idea, bien estructurada</h4>
+                        <p data-i18n="semanticRenderedText">El nombre de la etiqueta describe el contenido que contiene.</p>
+                    </article>
+                </div>
+
+                <aside class="learning-callout">
+                    <strong data-i18n="htmlTipTitle">Una buena pregunta</strong>
+                    <p data-i18n="htmlTipText">Si quitas los estilos, ¿la estructura sigue teniendo sentido? Si es así, probablemente elegiste bien las etiquetas.</p>
+                </aside>
+            </section>
+
+            <section class="note-section practice-section" id="practice">
+                <p class="section-kicker" data-i18n="htmlSectionThree">03 / APRENDER HACIENDO</p>
+                <h3 data-i18n="htmlPracticeHeading">Tu turno: crea una pequeña tarjeta</h3>
+                <p data-i18n="htmlPracticeText">Crea un <code>&lt;article&gt;</code> con un título y un párrafo sobre algo que estés aprendiendo. Después, comprueba que el contenido se entiende por su estructura, no solo por su apariencia.</p>
+                <p class="practice-prompt" data-i18n="htmlPracticePrompt">Reto extra: cambia el idioma del documento a inglés y observa qué atributo debes actualizar.</p>
+            </section>
+        </article>
+    </main>
+
+    <footer>
+
+    </footer>
+</body>
+</html>
