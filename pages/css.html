@@ -26,7 +26,62 @@
     </nav>
     <main>
         <button class="language-toggle" type="button" data-language-toggle>English</button>
+        <section class="notes-page">
+            <header class="notes-header">
+                <p class="intro-eyebrow" data-i18n="cssCardLabel">02 / ESTILO</p>
+                <h2 data-i18n="cssOverviewHeading">CSS: convierte estructura en diseño</h2>
+                <p class="intro-lead" data-i18n="cssOverviewIntro">Avanza desde las reglas básicas hasta los diseños flexibles y adaptables. Cada tema incluye conceptos clave y un ejemplo visual.</p>
+            </header>
+            <div class="html-topic-grid">
+                <article class="intro-card">
+                    <span class="card-number">01 / CSS</span>
+                    <h3 data-i18n="cssFundamentalsTitle">Fundamentos, cascada y especificidad</h3>
+                    <p data-i18n="cssFundamentalsSummary">Escribe reglas CSS y entiende cómo la cascada resuelve conflictos.</p>
+                    <a href="css/fundamentals.html" data-i18n="htmlOpenStructure">Abrir apunte →</a>
+                </article>
+                <article class="intro-card">
+                    <span class="card-number">02 / CSS</span>
+                    <h3 data-i18n="cssSelectorsTitle">Selectores y pseudoclases</h3>
+                    <p data-i18n="cssSelectorsSummary">Combina elementos y aplica estilos según el estado o la posición.</p>
+                    <a href="css/selectors.html" data-i18n="htmlOpenStructure">Abrir apunte →</a>
+                </article>
+                <article class="intro-card">
+                    <span class="card-number">03 / CSS</span>
+                    <h3 data-i18n="cssBoxModelTitle">El modelo de caja</h3>
+                    <p data-i18n="cssBoxModelSummary">Controla el tamaño, el espacio y las unidades de cada elemento.</p>
+                    <a href="css/box-model.html" data-i18n="htmlOpenStructure">Abrir apunte →</a>
+                </article>
+                <article class="intro-card">
+                    <span class="card-number">04 / CSS</span>
+                    <h3 data-i18n="cssPositioningTitle">Desbordamiento y posicionamiento</h3>
+                    <p data-i18n="cssPositioningSummary">Gestiona el desbordamiento, la posición y las capas.</p>
+                    <a href="css/positioning.html" data-i18n="htmlOpenStructure">Abrir apunte →</a>
+                </article>
+                <article class="intro-card">
+                    <span class="card-number">05 / CSS</span>
+                    <h3 data-i18n="cssFlexboxTitle">Diseño con Flexbox</h3>
+                    <p data-i18n="cssFlexboxSummary">Distribuye y alinea elementos en una dimensión.</p>
+                    <a href="css/flexbox.html" data-i18n="htmlOpenStructure">Abrir apunte →</a>
+                </article>
+                <article class="intro-card">
+                    <span class="card-number">06 / CSS</span>
+                    <h3 data-i18n="cssResponsiveTitle">Diseño adaptable</h3>
+                    <p data-i18n="cssResponsiveSummary">Empieza por móvil y adapta el diseño con media queries.</p>
+                    <a href="css/responsive.html" data-i18n="htmlOpenStructure">Abrir apunte →</a>
+                </article>
+            </div>
+        </section>
     </main>
-    <footer></footer>
+    <footer>
+        <div class="footer-inner">
+            <p data-i18n="footerNote">Hecho a mano con HTML, CSS y JavaScript. Un proyecto de aprendizaje continuo.</p>
+            <a href="https://github.com/F0SK1/CodingNotes" target="_blank" rel="noopener noreferrer" data-i18n="footerGithub">Ver el proyecto en GitHub ↗</a>
+        </div>
+    </footer>
+    <button class="back-to-top" type="button" data-back-to-top data-i18n-aria-label="backToTop" aria-label="Volver arriba" hidden>
+        <svg aria-hidden="true" viewBox="0 0 24 24">
+            <path d="M12 20V5M5 12l7-7 7 7"></path>
+        </svg>
+    </button>
 </body>
 </html>

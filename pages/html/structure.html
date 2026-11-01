@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Aprende la estructura de un documento HTML y cómo usar elementos semánticos.">
+    <title data-i18n="htmlStructureTitle">Estructura y semántica HTML | Coding Notes</title>
+    <link rel="stylesheet" href="../../style.css">
+    <script src="../../assets/language.js" defer></script>
+</head>
+<body>
+    <nav>
+        <h1 data-i18n="htmlTitle">Apuntes de HTML | Coding Notes</h1>
+        <span class="nav-links">
+            <a class="nav-link" href="../../index.html" data-i18n="home">Inicio</a>
+            <details open>
+                <summary data-i18n="categories">Categorías</summary>
+                <details class="sub-menu" open>
+                    <summary data-i18n="frontEnd">Desarrollo Front-end</summary>
+                    <ul>
+                        <li><a href="../css.html">CSS</a></li>
+                        <li><a href="../js.html">JavaScript</a></li>
+                    </ul>
+                </details>
+            </details>
+        </span>
+        <section class="lesson-sidebar-index" aria-labelledby="html-sidebar-index-title">
+            <h2 id="html-sidebar-index-title" data-i18n="htmlSidebarIndex">HTML lessons</h2>
+            <ul>
+                <li>
+                    <a href="structure.html" aria-current="page" data-i18n="htmlStructureNav">Structure &amp; semantics</a>
+                    <ul class="page-section-index" data-page-section-index>
+                        <li><a href="#document-basics" data-i18n="pageTocContent">Concepts</a></li>
+                        <li><a href="#semantic-html" data-i18n="htmlSemanticsHeading">Semantic HTML</a></li>
+                    </ul>
+                </li>
+                <li><a href="text.html" data-i18n="htmlTextNav">Text &amp; headings</a></li>
+                <li><a href="links.html" data-i18n="htmlLinksNav">Links &amp; paths</a></li>
+                <li><a href="lists.html" data-i18n="htmlListsNav">Lists</a></li>
+                <li><a href="forms.html" data-i18n="htmlFormsNav">Forms</a></li>
+            </ul>
+        </section>
+    </nav>
+    <main>
+        <button class="language-toggle" type="button" data-language-toggle>English</button>
+        <article class="notes-page">
+            <header class="notes-header">
+                <a class="lesson-back" href="../html.html" data-i18n="htmlBackToIndex">← Todos los apuntes de HTML</a>
+                <p class="intro-eyebrow" data-i18n="htmlSectionOne">01 / EL PUNTO DE PARTIDA</p>
+                <h2 data-i18n="htmlStructurePageHeading">HTML: una estructura que se entiende</h2>
+                <p class="intro-lead" data-i18n="htmlStructureLead">Una página necesita una estructura clara antes de añadir estilos o interacción. HTML define sus partes y el significado del contenido.</p>
+            </header>
+
+            <section class="note-section" id="document-basics">
+                <h2 data-i18n="htmlDocumentHeading">La anatomía de un documento HTML</h2>
+                <p data-i18n-html="htmlDocumentText">Un documento HTML empieza declarando que usa HTML5. Después, el elemento <code>&lt;html&gt;</code> contiene toda la página; <code>&lt;head&gt;</code> guarda información para el navegador y <code>&lt;body&gt;</code> contiene lo que verá la persona.</p>
+                <div class="example-grid">
+                    <div class="code-panel">
+                        <h3 data-i18n="codeLabel">Código</h3>
+                        <pre><code data-i18n="htmlDocumentExample">&lt;!doctype html&gt;
+&lt;html lang="es"&gt;
+&lt;head&gt;
+  &lt;meta charset="utf-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+  &lt;title&gt;Mi primera página&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;Hola, web&lt;/h1&gt;
+  &lt;p&gt;Esta es mi primera página.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                    </div>
+                    <div class="render-panel">
+                        <h3 data-i18n="renderedLabel">Resultado en la página</h3>
+                        <div class="rendered-example">
+                            <h1 data-i18n="htmlRenderedHeading">Hola, web</h1>
+                            <p data-i18n="htmlRenderedText">Esta es mi primera página.</p>
+                        </div>
+                    </div>
+                </div>
+                <ul class="concept-list">
+                    <li data-i18n-html="htmlConceptDoctype"><code>&lt;!doctype html&gt;</code> indica al navegador que interprete el documento con los estándares actuales.</li>
+                    <li data-i18n-html="htmlConceptLanguage"><code>lang="es"</code> identifica el idioma principal, lo que ayuda a lectores de pantalla y otras herramientas.</li>
+                    <li data-i18n-html="htmlConceptEncoding"><code>meta charset="utf-8"</code> permite mostrar correctamente caracteres como ñ y tildes.</li>
+                    <li data-i18n-html="htmlConceptViewport"><code>meta name="viewport"</code> ayuda a que la página se adapte a pantallas pequeñas.</li>
+                </ul>
+            </section>
+
+            <section class="note-section" id="semantic-html">
+                <p class="section-kicker" data-i18n="htmlSectionTwo">02 / DARLE SENTIDO</p>
+                <h2 data-i18n="htmlSemanticsHeading">Elige etiquetas por lo que significan</h2>
+                <p data-i18n="htmlSemanticsText">Las etiquetas semánticas describen el propósito de su contenido. Así, el documento resulta más fácil de entender para otras personas, navegadores y tecnologías de asistencia.</p>
+                <ul class="concept-list">
+                    <li data-i18n-html="htmlSemanticHeader"><code>&lt;header&gt;</code> presenta una página o una sección.</li>
+                    <li data-i18n-html="htmlSemanticNav"><code>&lt;nav&gt;</code> agrupa los enlaces principales de navegación.</li>
+                    <li data-i18n-html="htmlSemanticMain"><code>&lt;main&gt;</code> contiene el contenido principal de la página.</li>
+                    <li data-i18n-html="htmlSemanticArticle"><code>&lt;article&gt;</code> representa contenido independiente, como una publicación o tarjeta.</li>
+                    <li data-i18n-html="htmlSemanticSection"><code>&lt;section&gt;</code> agrupa contenido relacionado bajo un encabezado.</li>
+                    <li data-i18n-html="htmlSemanticAside"><code>&lt;aside&gt;</code> contiene información complementaria.</li>
+                    <li data-i18n-html="htmlSemanticFooter"><code>&lt;footer&gt;</code> presenta información final de la página o sección.</li>
+                </ul>
+                <div class="comparison-grid">
+                    <article class="comparison-card">
+                        <h3 data-i18n-html="htmlSectionVsDivTitle"><code>&lt;section&gt;</code> o <code>&lt;div&gt;</code>?</h3>
+                        <p data-i18n-html="htmlSectionVsDivText">Usa <code>&lt;section&gt;</code> para un tema con sentido propio y su encabezado. Usa <code>&lt;div&gt;</code> cuando solo necesitas agrupar elementos para aplicar estilos o maquetar.</p>
+                    </article>
+                    <aside class="learning-callout">
+                        <strong data-i18n="htmlClassTipTitle">No añadas clases por costumbre</strong>
+                        <p data-i18n="htmlClassTipText">Empieza con elementos semánticos. Añade una clase o un id solo cuando necesites identificar ese elemento para estilos, enlaces internos o comportamiento.</p>
+                    </aside>
+                </div>
+                <div class="example-grid semantic-layout">
+                    <div class="code-panel">
+                        <h3 data-i18n="semanticCodeLabel">Una tarjeta semántica</h3>
+                        <pre><code data-i18n="htmlSemanticExample">&lt;article&gt;
+  &lt;header&gt;
+    &lt;h3&gt;Una idea, bien estructurada&lt;/h3&gt;
+  &lt;/header&gt;
+  &lt;p&gt;Cada etiqueta aporta significado.&lt;/p&gt;
+  &lt;footer&gt;Tema: HTML semántico&lt;/footer&gt;
+&lt;/article&gt;</code></pre>
+                    </div>
+                    <article class="rendered-example semantic-card">
+                        <span class="card-number" data-i18n="semanticPreviewLabel">VISTA PREVIA</span>
+                        <header><h3 data-i18n="semanticRenderedHeading">Una idea, bien estructurada</h3></header>
+                        <p data-i18n="semanticRenderedText">Cada etiqueta aporta significado.</p>
+                        <footer data-i18n="semanticRenderedFooter">Tema: HTML semántico</footer>
+                    </article>
+                </div>
+                <aside class="learning-callout">
+                    <strong data-i18n="htmlTipTitle">Una buena pregunta</strong>
+                    <p data-i18n="htmlTipText">Si quitas los estilos, ¿la estructura sigue teniendo sentido? Si es así, probablemente elegiste bien las etiquetas.</p>
+                </aside>
+            </section>
+
+            <nav class="lesson-pagination" aria-label="Navegación entre apuntes" data-i18n-aria-label="htmlPaginationLabel">
+                <a href="../html.html" data-i18n="htmlBackToIndex">← Todos los apuntes de HTML</a>
+                <a href="text.html" data-i18n="htmlNextText">Siguiente: textos y jerarquía →</a>
+            </nav>
+        </article>
+    </main>
+    <footer>
+        <div class="footer-inner">
+            <p data-i18n="footerNote">Hecho a mano con HTML, CSS y JavaScript. Un proyecto de aprendizaje continuo.</p>
+            <a href="https://github.com/F0SK1/CodingNotes" target="_blank" rel="noopener noreferrer" data-i18n="footerGithub">Ver el proyecto en GitHub ↗</a>
+        </div>
+    </footer>
+    <button class="back-to-top" type="button" data-back-to-top data-i18n-aria-label="backToTop" aria-label="Volver arriba" hidden>
+        <svg aria-hidden="true" viewBox="0 0 24 24">
+            <path d="M12 20V5M5 12l7-7 7 7"></path>
+        </svg>
+    </button>
+</body>
+</html>

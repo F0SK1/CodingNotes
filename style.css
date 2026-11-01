@@ -52,17 +52,23 @@ body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 
-nav {
+body > nav {
+    position: sticky;
+    top: 0;
     background-color: var(--bg-sidebar);
     border-right: 1px solid var(--border-color);
     color: var(--text-main);
     grid-column: 1;
     grid-row: 1 / -1;
+    align-self: start;
+    height: 100vh;
+    max-height: 100vh;
     min-height: 100vh;
+    overflow-y: auto;
     padding: 1rem 1.25rem;
 }
 
-nav > h1 {
+body > nav > h1 {
     font-size: clamp(1.25rem, 2vw, 1.5rem);
     margin: 0.5rem 0 1.5rem;
 }
@@ -71,6 +77,164 @@ nav > h1 {
     display: flex;
     flex-direction: column;
     line-height: 2;
+}
+
+.sidebar-learning {
+    display: grid;
+    gap: 0.75rem;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border-subtle);
+    padding-top: 1.25rem;
+}
+
+.sidebar-learning h2 {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.sidebar-learning > p:first-of-type {
+    margin: -0.35rem 0 0.15rem;
+    color: var(--text-muted);
+    font-size: 0.78rem;
+    line-height: 1.5;
+}
+
+.sidebar-topic {
+    display: grid;
+    grid-template-columns: 1.7rem minmax(0, 1fr) auto;
+    align-items: start;
+    gap: 0.6rem;
+    border: 1px solid transparent;
+    border-radius: 0.5rem;
+    color: var(--text-main);
+    padding: 0.65rem 0.5rem;
+    text-decoration: none;
+    transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+.sidebar-topic:hover {
+    transform: translateX(2px);
+    border-color: var(--border-subtle);
+    background: var(--bg-surface);
+}
+
+.sidebar-topic-number {
+    display: grid;
+    width: 1.55rem;
+    height: 1.55rem;
+    place-items: center;
+    border-radius: 0.4rem;
+    background: var(--bg-surface);
+    color: var(--accent);
+    font-size: 0.65rem;
+    font-weight: 700;
+}
+
+.sidebar-topic strong,
+.sidebar-topic small {
+    display: block;
+}
+
+.sidebar-topic strong {
+    font-size: 0.82rem;
+}
+
+.sidebar-topic small {
+    margin-top: 0.2rem;
+    color: var(--text-muted);
+    font-size: 0.72rem;
+    line-height: 1.4;
+}
+
+.sidebar-topic-arrow {
+    align-self: center;
+    color: var(--accent);
+    font-size: 0.9rem;
+}
+
+.sidebar-learning .sidebar-learning-note {
+    margin: 0.25rem 0 0;
+    border-radius: 0.4rem;
+    background: linear-gradient(110deg, rgb(56 189 248 / 12%), rgb(56 189 248 / 3%));
+    color: var(--accent);
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.025em;
+    line-height: 1.5;
+    padding: 0.65rem;
+    text-align: center;
+}
+
+.lesson-sidebar-index {
+    margin-top: 2rem;
+    border-top: 1px solid var(--border-subtle);
+    padding-top: 1rem;
+}
+
+.lesson-sidebar-index h2 {
+    margin: 0 0 0.65rem;
+    color: var(--text-muted);
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.lesson-sidebar-index ul {
+    display: grid;
+    gap: 0.25rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.lesson-sidebar-index a {
+    display: block;
+    border-left: 2px solid transparent;
+    border-radius: 0 0.25rem 0.25rem 0;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    line-height: 1.4;
+    padding: 0.45rem 0.6rem;
+    text-decoration: none;
+    transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.lesson-sidebar-index a:hover {
+    background: var(--bg-surface);
+    color: var(--text-main);
+}
+
+.lesson-sidebar-index a[aria-current="page"] {
+    border-left-color: var(--accent);
+    background: var(--bg-surface);
+    color: var(--accent);
+    font-weight: 600;
+}
+
+.lesson-sidebar-index .page-section-index {
+    display: grid;
+    gap: 0.15rem;
+    margin: 0.3rem 0 0.55rem 0.65rem;
+    padding: 0 0 0 0.6rem;
+    border-left: 1px solid var(--border-subtle);
+    list-style: none;
+}
+
+.lesson-sidebar-index .page-section-index a {
+    border-left: 0;
+    border-radius: 0.25rem;
+    font-size: 0.78rem;
+    padding: 0.35rem 0.5rem;
+}
+
+.page-section-index a[aria-current="location"] {
+    background: transparent;
+    color: var(--accent);
+    font-weight: 600;
+}
+
+.notes-page [id] {
+    scroll-margin-top: 1.5rem;
 }
 
 a.disabled {
@@ -157,6 +321,51 @@ details[open] > summary::after {
 .language-toggle:hover {
     background-color: var(--bg-surface-hover);
     border-color: var(--accent);
+}
+
+.back-to-top {
+    position: fixed;
+    z-index: 10;
+    right: 1rem;
+    bottom: 1rem;
+    display: grid;
+    width: 2rem;
+    height: 2rem;
+    place-items: center;
+    border: 1px solid var(--border-subtle);
+    border-radius: 0.4rem;
+    background: var(--bg-surface);
+    box-shadow: 0 0.35rem 1rem rgb(0 0 0 / 25%);
+    color: var(--accent);
+    cursor: pointer;
+    padding: 0.35rem;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.back-to-top svg {
+    display: block;
+    width: 70%;
+    height: 70%;
+    fill: none;
+    stroke: currentColor;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 3;
+}
+
+.back-to-top[hidden] {
+    display: none;
+}
+
+.back-to-top:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent);
+    background: var(--bg-surface-hover);
+}
+
+.back-to-top:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
 }
 
 main,
@@ -289,6 +498,56 @@ main {
 .notes-page {
     max-width: 68rem;
     margin: 2.25rem auto 0;
+}
+
+.html-topic-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+    max-width: 68rem;
+    margin: 0 auto;
+}
+
+.html-topic-grid .intro-card {
+    min-height: 12rem;
+}
+
+.lesson-back {
+    display: inline-block;
+    margin-bottom: 1.5rem;
+    color: var(--accent);
+    font-size: 0.9rem;
+    text-decoration: none;
+}
+
+.lesson-back:hover {
+    text-decoration: underline;
+}
+
+.lesson-pagination {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    min-height: 0;
+    margin-top: 2rem;
+    border: 1px solid var(--border-subtle);
+    border-radius: 0.65rem;
+    background: var(--bg-surface);
+    color: inherit;
+    grid-column: auto;
+    grid-row: auto;
+    padding: 1rem 1.2rem;
+}
+
+.lesson-pagination a {
+    color: var(--accent);
+    font-size: 0.9rem;
+    text-decoration: none;
+}
+
+.lesson-pagination a:hover {
+    text-decoration: underline;
 }
 
 .notes-header {
@@ -568,12 +827,191 @@ main {
     accent-color: var(--accent);
 }
 
+.form-demo {
+    display: grid;
+    gap: 0.55rem;
+    margin-top: 1rem;
+}
+
+.form-demo label {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+}
+
+.form-demo input,
+.form-demo textarea {
+    width: 100%;
+    border: 1px solid var(--border-subtle);
+    border-radius: 0.35rem;
+    background: var(--bg-surface);
+    color: var(--text-main);
+    font: inherit;
+    padding: 0.55rem 0.65rem;
+}
+
+.form-demo input:focus,
+.form-demo textarea:focus {
+    border-color: var(--accent);
+    outline: 2px solid var(--accent);
+}
+
+.form-demo button {
+    justify-self: start;
+    margin-top: 0.3rem;
+    border: 0;
+    border-radius: 0.35rem;
+    background: var(--accent);
+    color: var(--accent-text);
+    cursor: pointer;
+    font: inherit;
+    font-weight: 600;
+    padding: 0.55rem 0.8rem;
+}
+
+.form-demo button:hover {
+    background: var(--accent-hover);
+}
+
+.form-demo-status {
+    margin: 0.35rem 0 0;
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    line-height: 1.5;
+}
+
+.css-demo-card {
+    margin-top: 1rem;
+    border: 1px solid var(--border-subtle);
+    border-radius: 0.5rem;
+    background: var(--bg-surface);
+    color: var(--text-main);
+    padding: 1rem;
+}
+
+.css-demo-card p {
+    margin: 0.5rem 0 0;
+    color: var(--text-muted);
+    line-height: 1.55;
+}
+
+.css-selector-demo {
+    display: grid;
+    gap: 0.4rem;
+    margin: 1rem 0;
+    padding: 0;
+    list-style: none;
+}
+
+.css-selector-demo li {
+    border-radius: 0.3rem;
+    color: var(--text-muted);
+    padding: 0.55rem;
+}
+
+.css-selector-demo li:nth-child(even) {
+    background: var(--bg-surface);
+}
+
+.css-focus-demo {
+    border: 1px solid var(--border-subtle);
+    border-radius: 0.35rem;
+    background: var(--bg-surface);
+    color: var(--text-main);
+    cursor: pointer;
+    font: inherit;
+    padding: 0.55rem 0.75rem;
+}
+
+.css-focus-demo:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+}
+
+.css-box-model-demo {
+    width: min(100%, 22rem);
+    margin: 1rem auto;
+    border: 2px solid var(--accent);
+    background: var(--bg-surface);
+    color: var(--text-main);
+    line-height: 1.5;
+    padding: 1.25rem;
+}
+
+.css-position-stage {
+    position: relative;
+    margin-top: 1rem;
+    border: 1px solid var(--border-subtle);
+    border-radius: 0.5rem;
+    background: var(--bg-main);
+    padding: 2.5rem 1rem 1rem;
+}
+
+.css-position-stage p {
+    margin: 0.5rem 0 0;
+    color: var(--text-muted);
+}
+
+.css-position-badge {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    border-radius: 999px;
+    background: var(--accent);
+    color: var(--accent-text);
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 0.2rem 0.55rem;
+}
+
+.css-overflow-demo {
+    max-height: 4rem;
+    margin-top: 0.75rem;
+    overflow: auto;
+    border: 1px solid var(--border-subtle);
+    border-radius: 0.35rem;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    line-height: 1.5;
+    padding: 0.5rem;
+}
+
+.css-flex-demo {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.65rem;
+    margin-top: 1rem;
+}
+
+.css-flex-demo span,
+.css-responsive-demo span {
+    border: 1px solid var(--border-subtle);
+    border-radius: 0.35rem;
+    background: var(--bg-surface);
+    color: var(--text-main);
+    padding: 0.7rem;
+}
+
+.css-responsive-demo {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.65rem;
+    margin-top: 1rem;
+}
+
 .learning-callout {
     margin-top: 1.25rem;
     border-left: 3px solid var(--accent);
     border-radius: 0 0.4rem 0.4rem 0;
     background: var(--bg-surface);
     padding: 1rem 1.2rem;
+}
+
+@media (min-width: 48rem) {
+    .css-responsive-demo {
+        grid-template-columns: 1fr 1fr;
+    }
 }
 
 .learning-callout strong {
@@ -631,13 +1069,21 @@ body > footer {
         grid-template-rows: auto minmax(0, 1fr) auto;
     }
 
-    nav {
+    body > nav {
+        position: static;
         grid-column: 1;
         grid-row: 1;
+        height: auto;
+        max-height: none;
         min-height: 0;
+        overflow: visible;
     }
 
-    nav > h1 {
+    .lesson-sidebar-index {
+        margin-top: 1rem;
+    }
+
+    body > nav > h1 {
         margin-bottom: 0.75rem;
     }
 
@@ -658,6 +1104,10 @@ body > footer {
 
     .notes-page {
         margin-top: 1.75rem;
+    }
+
+    .html-topic-grid {
+        grid-template-columns: 1fr;
     }
 
     .example-grid,
@@ -692,5 +1142,10 @@ body > footer {
         align-items: flex-start;
         flex-direction: column;
         gap: 0.5rem;
+    }
+
+    .lesson-pagination {
+        align-items: flex-start;
+        flex-direction: column;
     }
 }

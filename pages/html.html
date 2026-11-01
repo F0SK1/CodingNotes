@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Aprende la estructura básica de un documento HTML y el propósito de las etiquetas semánticas.">
+    <meta name="description" content="Explora los apuntes de HTML: estructura, textos, enlaces y listas.">
     <title data-i18n="htmlTitle">Apuntes de HTML | Coding Notes</title>
     <link rel="stylesheet" href="../style.css">
     <script src="../assets/language.js" defer></script>
@@ -11,7 +11,6 @@
 <body>
     <nav>
         <h1 data-i18n="htmlTitle">Apuntes de HTML | Coding Notes</h1>
-
         <span class="nav-links">
             <a class="nav-link" href="../index.html" data-i18n="home">Inicio</a>
             <details open>
@@ -29,209 +28,60 @@
 
     <main>
         <button class="language-toggle" type="button" data-language-toggle>English</button>
-        <article class="notes-page">
+        <section class="notes-page">
             <header class="notes-header">
                 <p class="intro-eyebrow" data-i18n="htmlEyebrow">01 · FUNDAMENTOS DE HTML</p>
-                <h2 data-i18n="htmlHeading">HTML: estructura con significado</h2>
-                <p class="intro-lead" data-i18n="htmlIntro">Antes de pensar en colores o animaciones, una página necesita una estructura clara. HTML organiza el contenido y explica qué papel cumple cada parte.</p>
-                <div class="notes-toc" role="navigation" aria-label="Contenido de esta página" data-i18n-aria-label="htmlTocLabel">
-                    <a href="#document" data-i18n="htmlTocDocument">Documento básico</a>
-                    <a href="#semantics" data-i18n="htmlTocSemantics">HTML semántico</a>
-                    <a href="#text" data-i18n="htmlTocText">Textos y jerarquía</a>
-                    <a href="#links" data-i18n="htmlTocLinks">Enlaces y rutas</a>
-                    <a href="#lists" data-i18n="htmlTocLists">Listas</a>
-                    <a href="#practice" data-i18n="htmlTocPractice">Ponlo en práctica</a>
-                </div>
+                <h2 data-i18n="htmlOverviewHeading">Aprende HTML, paso a paso</h2>
+                <p class="intro-lead" data-i18n="htmlOverviewIntro">Elige un tema y explora cómo HTML da estructura y significado al contenido de la web. Cada apunte combina explicaciones breves con ejemplos que puedes ver en acción.</p>
             </header>
 
-            <section class="note-section" id="document">
-                <p class="section-kicker" data-i18n="htmlSectionOne">01 / EL PUNTO DE PARTIDA</p>
-                <h2 data-i18n="htmlDocumentHeading">La anatomía de un documento HTML</h2>
-                <p data-i18n-html="htmlDocumentText">Un documento HTML empieza declarando que usa HTML5. Después, el elemento <code>&lt;html&gt;</code> contiene toda la página; <code>&lt;head&gt;</code> guarda información para el navegador y <code>&lt;body&gt;</code> contiene lo que verá la persona.</p>
+            <div class="html-topic-grid">
+                <article class="intro-card">
+                    <span class="card-number" data-i18n="htmlStructureLabel">01 / ESTRUCTURA</span>
+                    <h3 data-i18n="htmlDocumentHeading">La anatomía de un documento HTML</h3>
+                    <p data-i18n="htmlStructureSummary">Conoce la estructura de un documento y cuándo elegir elementos semánticos.</p>
+                    <a href="html/structure.html" data-i18n="htmlOpenStructure">Abrir apunte →</a>
+                </article>
+                <article class="intro-card">
+                    <span class="card-number" data-i18n="htmlTextLabel">02 / CONTENIDO</span>
+                    <h3 data-i18n="htmlTextHeading">Organiza el contenido para que se lea mejor</h3>
+                    <p data-i18n="htmlTextSummary">Usa encabezados, párrafos y énfasis para que el contenido tenga una jerarquía clara.</p>
+                    <a href="html/text.html" data-i18n="htmlOpenText">Abrir apunte →</a>
+                </article>
+                <article class="intro-card">
+                    <span class="card-number" data-i18n="htmlLinksLabel">03 / NAVEGACIÓN</span>
+                    <h3 data-i18n="htmlLinksHeading">Enlaces y rutas relativas</h3>
+                    <p data-i18n="htmlLinksSummary">Conecta páginas con enlaces internos, externos y rutas relativas.</p>
+                    <a href="html/links.html" data-i18n="htmlOpenLinks">Abrir apunte →</a>
+                </article>
+                <article class="intro-card">
+                    <span class="card-number" data-i18n="htmlListsLabel">04 / ORGANIZACIÓN</span>
+                    <h3 data-i18n="htmlListsHeading">Listas: opciones y pasos</h3>
+                    <p data-i18n="htmlListsSummary">Agrupa elementos en listas ordenadas y no ordenadas.</p>
+                    <a href="html/lists.html" data-i18n="htmlOpenLists">Abrir apunte →</a>
+                </article>
+                <article class="intro-card">
+                    <span class="card-number" data-i18n="htmlFormsLabel">05 / INTERACCIÓN</span>
+                    <h3 data-i18n="htmlFormsHeading">Formularios: recoge información</h3>
+                    <p data-i18n="htmlFormsSummary">Conecta etiquetas y controles para crear formularios claros y accesibles.</p>
+                    <a href="html/forms.html" data-i18n="htmlOpenForms">Abrir apunte →</a>
+                </article>
+            </div>
 
-                <div class="example-grid">
-                    <div class="code-panel">
-                        <h4 data-i18n="codeLabel">Código</h4>
-                        <pre><code data-i18n="htmlDocumentExample">&lt;!doctype html&gt;
-&lt;html lang="es"&gt;
-&lt;head&gt;
-  &lt;meta charset="utf-8"&gt;
-  &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
-  &lt;title&gt;Mi primera página&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-  &lt;h1&gt;Hola, web&lt;/h1&gt;
-  &lt;p&gt;Esta es mi primera página.&lt;/p&gt;
-&lt;/body&gt;
-&lt;/html&gt;</code></pre>
-                    </div>
-                    <div class="render-panel">
-                        <h4 data-i18n="renderedLabel">Resultado en la página</h4>
-                        <div class="rendered-example">
-                            <h1 data-i18n="htmlRenderedHeading">Hola, web</h1>
-                            <p data-i18n="htmlRenderedText">Esta es mi primera página.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <ul class="concept-list">
-                    <li data-i18n-html="htmlConceptDoctype"><code>&lt;!doctype html&gt;</code> indica al navegador que interprete el documento con los estándares actuales.</li>
-                    <li data-i18n-html="htmlConceptLanguage"><code>lang="es"</code> identifica el idioma principal, lo que ayuda a lectores de pantalla y otras herramientas.</li>
-                    <li data-i18n-html="htmlConceptEncoding"><code>meta charset="utf-8"</code> permite mostrar correctamente caracteres como ñ y tildes.</li>
-                    <li data-i18n-html="htmlConceptViewport"><code>meta name="viewport"</code> ayuda a que la página se adapte a pantallas pequeñas.</li>
-                </ul>
-            </section>
-
-            <section class="note-section" id="semantics">
-                <p class="section-kicker" data-i18n="htmlSectionTwo">02 / DARLE SENTIDO</p>
-                <h2 data-i18n="htmlSemanticsHeading">Elige etiquetas por lo que significan</h2>
-                <p data-i18n="htmlSemanticsText">Las etiquetas semánticas describen el propósito de su contenido. Así, el documento resulta más fácil de entender para otras personas, navegadores y tecnologías de asistencia.</p>
-                <ul class="concept-list">
-                    <li data-i18n-html="htmlSemanticHeader"><code>&lt;header&gt;</code> presenta una página o una sección.</li>
-                    <li data-i18n-html="htmlSemanticNav"><code>&lt;nav&gt;</code> agrupa los enlaces de navegación principales.</li>
-                    <li data-i18n-html="htmlSemanticMain"><code>&lt;main&gt;</code> contiene el contenido principal y único de la página.</li>
-                    <li data-i18n-html="htmlSemanticArticle"><code>&lt;article&gt;</code> representa contenido independiente, como una publicación o tarjeta.</li>
-                    <li data-i18n-html="htmlSemanticSection"><code>&lt;section&gt;</code> agrupa contenido relacionado bajo un encabezado.</li>
-                    <li data-i18n-html="htmlSemanticAside"><code>&lt;aside&gt;</code> contiene información complementaria.</li>
-                    <li data-i18n-html="htmlSemanticFooter"><code>&lt;footer&gt;</code> presenta información final de la página o sección.</li>
-                </ul>
-                <div class="comparison-grid">
-                    <article class="comparison-card">
-                        <h3 data-i18n-html="htmlSectionVsDivTitle"><code>&lt;section&gt;</code> o <code>&lt;div&gt;</code>?</h3>
-                        <p data-i18n-html="htmlSectionVsDivText">Usa <code>&lt;section&gt;</code> para un tema con sentido propio y su encabezado. Usa <code>&lt;div&gt;</code> cuando solo necesitas agrupar elementos para aplicar estilos o maquetar.</p>
-                    </article>
-                    <aside class="learning-callout">
-                        <strong data-i18n="htmlClassTipTitle">No añadas clases por costumbre</strong>
-                        <p data-i18n="htmlClassTipText">Empieza con elementos semánticos. Añade una clase o un id solo cuando necesites identificar ese elemento para estilos, enlaces internos o comportamiento.</p>
-                    </aside>
-                </div>
-                <div class="example-grid semantic-layout">
-                    <div class="code-panel">
-                        <h4 data-i18n="semanticCodeLabel">Una tarjeta semántica</h4>
-                        <pre><code data-i18n="htmlSemanticExample">&lt;article&gt;
-  &lt;header&gt;
-    &lt;h3&gt;Una idea, bien estructurada&lt;/h3&gt;
-  &lt;/header&gt;
-  &lt;p&gt;Cada etiqueta aporta significado.&lt;/p&gt;
-  &lt;footer&gt;Tema: HTML semántico&lt;/footer&gt;
-&lt;/article&gt;</code></pre>
-                    </div>
-                    <article class="rendered-example semantic-card">
-                        <span class="card-number" data-i18n="semanticPreviewLabel">VISTA PREVIA</span>
-                        <header><h3 data-i18n="semanticRenderedHeading">Una idea, bien estructurada</h3></header>
-                        <p data-i18n="semanticRenderedText">Cada etiqueta aporta significado.</p>
-                        <footer data-i18n="semanticRenderedFooter">Tema: HTML semántico</footer>
-                    </article>
-                </div>
-
-                <aside class="learning-callout">
-                    <strong data-i18n="htmlTipTitle">Una buena pregunta</strong>
-                    <p data-i18n="htmlTipText">Si quitas los estilos, ¿la estructura sigue teniendo sentido? Si es así, probablemente elegiste bien las etiquetas.</p>
-                </aside>
-            </section>
-
-            <section class="note-section" id="text">
-                <p class="section-kicker" data-i18n="htmlSectionText">03 / JERARQUÍA Y ÉNFASIS</p>
-                <h2 data-i18n="htmlTextHeading">Organiza el contenido para que se lea mejor</h2>
-                <p data-i18n="htmlTextIntro">Los encabezados crean una jerarquía, los párrafos agrupan ideas y las etiquetas de énfasis resaltan lo importante. Elige cada elemento por su significado, no solo por su apariencia.</p>
-                <ul class="concept-list">
-                    <li data-i18n-html="htmlHeadingLevels"><code>&lt;h1&gt;</code> a <code>&lt;h6&gt;</code> organizan los títulos desde el tema principal hasta los subtemas. Mantén el orden lógico y no saltes niveles solo para cambiar el tamaño.</li>
-                    <li data-i18n-html="htmlParagraphMeaning"><code>&lt;p&gt;</code> agrupa una idea o párrafo de texto.</li>
-                    <li data-i18n-html="htmlStrongMeaning"><code>&lt;strong&gt;</code> marca importancia; <code>&lt;em&gt;</code> añade énfasis.</li>
-                    <li data-i18n-html="htmlHrMeaning"><code>&lt;hr&gt;</code> indica un cambio temático entre partes del contenido.</li>
-                </ul>
-                <div class="example-grid text-example-grid">
-                    <div class="code-panel">
-                        <h3 data-i18n="htmlTextCodeTitle">La jerarquía en código</h3>
-                        <pre><code data-i18n="htmlTextExample">&lt;h2&gt;Aprender HTML&lt;/h2&gt;
-&lt;p&gt;Una página se construye paso a paso.&lt;/p&gt;
-&lt;h3&gt;Empieza por la estructura&lt;/h3&gt;
-&lt;p&gt;Usa &lt;strong&gt;etiquetas con significado&lt;/strong&gt;
-  y añade &lt;em&gt;énfasis cuando haga falta&lt;/em&gt;.&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;Después, sigue con el siguiente tema.&lt;/p&gt;</code></pre>
-                    </div>
-                    <div class="render-panel">
-                        <h3 data-i18n="renderedLabel">Resultado en la página</h3>
-                        <div class="rendered-example hierarchy-preview">
-                            <h2 data-i18n="htmlTextRenderedHeading">Aprender HTML</h2>
-                            <p data-i18n="htmlTextRenderedIntro">Una página se construye paso a paso.</p>
-                            <h3 data-i18n="htmlTextRenderedSubheading">Empieza por la estructura</h3>
-                            <p><span data-i18n="htmlTextRenderedPrefix">Usa</span> <strong data-i18n="htmlTextRenderedStrong">etiquetas con significado</strong> <span data-i18n="htmlTextRenderedConnector">y añade</span> <em data-i18n="htmlTextRenderedEmphasis">énfasis cuando haga falta</em>.</p>
-                            <hr>
-                            <p data-i18n="htmlTextRenderedEnd">Después, sigue con el siguiente tema.</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section class="note-section" id="links">
-                <p class="section-kicker" data-i18n="htmlSectionLinks">04 / CONECTAR PÁGINAS</p>
-                <h2 data-i18n="htmlLinksHeading">Enlaces y rutas relativas</h2>
-                <p data-i18n-html="htmlLinksIntro">Un enlace usa <code>&lt;a&gt;</code> y el atributo <code>href</code> para indicar su destino. Las rutas relativas se calculan desde la carpeta del archivo actual: <code>../index.html</code> sube un nivel; desde la raíz, <code>pages/html.html</code> entra en la carpeta pages.</p>
-                <ul class="concept-list">
-                    <li data-i18n-html="htmlExternalLinkTip">Para abrir un sitio externo en otra pestaña, usa <code>target="_blank"</code> junto con <code>rel="noopener noreferrer"</code>.</li>
-                    <li data-i18n="htmlRelativeLinkTip">Usa rutas relativas para que los enlaces sigan funcionando al mover el sitio entre equipos o servidores.</li>
-                </ul>
-                <div class="example-grid">
-                    <div class="code-panel">
-                        <h3 data-i18n="htmlLinksCodeTitle">Enlaces en HTML</h3>
-                        <pre><code data-i18n="htmlLinksExample">&lt;a href="../index.html"&gt;Volver al inicio&lt;/a&gt;
-&lt;a href="https://developer.mozilla.org/"
-  target="_blank" rel="noopener noreferrer"&gt;
-  Consultar MDN
-&lt;/a&gt;</code></pre>
-                    </div>
-                    <div class="render-panel">
-                        <h3 data-i18n="htmlLinksDemoTitle">Prueba los enlaces</h3>
-                        <div class="rendered-example link-demo">
-                            <a class="demo-link" href="../index.html" data-i18n="htmlHomeDemo">← Volver al inicio</a>
-                            <a class="demo-link demo-link-button" href="https://developer.mozilla.org/" target="_blank" rel="noopener noreferrer" data-i18n="htmlExternalDemo">Abrir MDN en otra pestaña ↗</a>
-                            <p data-i18n="htmlLinksDemoHint">El primer enlace usa una ruta relativa; el segundo abre un recurso externo.</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section class="note-section" id="lists">
-                <p class="section-kicker" data-i18n="htmlSectionLists">05 / AGRUPAR ELEMENTOS</p>
-                <h2 data-i18n="htmlListsHeading">Listas: opciones y pasos</h2>
-                <p data-i18n-html="htmlListsIntro">Usa <code>&lt;ul&gt;</code> cuando el orden no importa, <code>&lt;ol&gt;</code> cuando los pasos siguen una secuencia y <code>&lt;li&gt;</code> para cada elemento de ambas listas.</p>
-                <div class="example-grid">
-                    <div class="code-panel">
-                        <h3 data-i18n="htmlListsCodeTitle">Dos tipos de lista</h3>
-                        <pre><code data-i18n="htmlListsExample">&lt;ul&gt;
-  &lt;li&gt;HTML&lt;/li&gt;
-  &lt;li&gt;CSS&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Planificar la estructura&lt;/li&gt;
-  &lt;li&gt;Escribir el marcado&lt;/li&gt;
-&lt;/ol&gt;</code></pre>
-                    </div>
-                    <div class="render-panel">
-                        <h3 data-i18n="htmlListsDemoTitle">Lista de habilidades front-end</h3>
-                        <div class="rendered-example checklist">
-                            <label><input type="checkbox"> <span data-i18n="htmlChecklistStructure">Estructurar contenido con HTML</span></label>
-                            <label><input type="checkbox"> <span data-i18n="htmlChecklistStyle">Dar estilo con CSS</span></label>
-                            <label><input type="checkbox"> <span data-i18n="htmlChecklistInteraction">Añadir interacción con JavaScript</span></label>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section class="note-section practice-section" id="practice">
-                <p class="section-kicker" data-i18n="htmlSectionPractice">06 / APRENDER HACIENDO</p>
-                <h2 data-i18n="htmlPracticeHeading">Tu turno: crea una pequeña tarjeta</h2>
-                <p data-i18n-html="htmlPracticeText">Crea un <code>&lt;article&gt;</code> con un título y un párrafo sobre algo que estés aprendiendo. Después, comprueba que el contenido se entiende por su estructura, no solo por su apariencia.</p>
-                <p class="practice-prompt" data-i18n="htmlPracticePrompt">Reto extra: cambia el idioma del documento a inglés y observa qué atributo debes actualizar.</p>
-            </section>
-        </article>
+            <p class="intro-signoff" data-i18n="htmlOverviewSignoff">Más temas se añadirán a medida que avance el recorrido.</p>
+        </section>
     </main>
 
     <footer>
-
+        <div class="footer-inner">
+            <p data-i18n="footerNote">Hecho a mano con HTML, CSS y JavaScript. Un proyecto de aprendizaje continuo.</p>
+            <a href="https://github.com/F0SK1/CodingNotes" target="_blank" rel="noopener noreferrer" data-i18n="footerGithub">Ver el proyecto en GitHub ↗</a>
+        </div>
     </footer>
+    <button class="back-to-top" type="button" data-back-to-top data-i18n-aria-label="backToTop" aria-label="Volver arriba" hidden>
+        <svg aria-hidden="true" viewBox="0 0 24 24">
+            <path d="M12 20V5M5 12l7-7 7 7"></path>
+        </svg>
+    </button>
 </body>
 </html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Aprende a organizar títulos, párrafos y énfasis con HTML.">
+    <title data-i18n="htmlTextPageTitle">Textos y jerarquía HTML | Coding Notes</title>
+    <link rel="stylesheet" href="../../style.css">
+    <script src="../../assets/language.js" defer></script>
+</head>
+<body>
+    <nav>
+        <h1 data-i18n="htmlTitle">Apuntes de HTML | Coding Notes</h1>
+        <span class="nav-links">
+            <a class="nav-link" href="../../index.html" data-i18n="home">Inicio</a>
+            <details open>
+                <summary data-i18n="categories">Categorías</summary>
+                <details class="sub-menu" open>
+                    <summary data-i18n="frontEnd">Desarrollo Front-end</summary>
+                    <ul>
+                        <li><a href="../css.html">CSS</a></li>
+                        <li><a href="../js.html">JavaScript</a></li>
+                    </ul>
+                </details>
+            </details>
+        </span>
+        <section class="lesson-sidebar-index" aria-labelledby="html-sidebar-index-title">
+            <h2 id="html-sidebar-index-title" data-i18n="htmlSidebarIndex">HTML lessons</h2>
+            <ul>
+                <li><a href="structure.html" data-i18n="htmlStructureNav">Structure &amp; semantics</a></li>
+                <li>
+                    <a href="text.html" aria-current="page" data-i18n="htmlTextNav">Text &amp; headings</a>
+                    <ul class="page-section-index" data-page-section-index>
+                        <li><a href="#text-content" data-i18n="pageTocContent">Concepts</a></li>
+                        <li><a href="#text-example" data-i18n="pageTocExample">Example</a></li>
+                        <li><a href="#text-tip" data-i18n="pageTocTip">Key takeaway</a></li>
+                    </ul>
+                </li>
+                <li><a href="links.html" data-i18n="htmlLinksNav">Links &amp; paths</a></li>
+                <li><a href="lists.html" data-i18n="htmlListsNav">Lists</a></li>
+                <li><a href="forms.html" data-i18n="htmlFormsNav">Forms</a></li>
+            </ul>
+        </section>
+    </nav>
+    <main>
+        <button class="language-toggle" type="button" data-language-toggle>English</button>
+        <article class="notes-page">
+            <header class="notes-header">
+                <a class="lesson-back" href="../html.html" data-i18n="htmlBackToIndex">← Todos los apuntes de HTML</a>
+                <p class="intro-eyebrow" data-i18n="htmlSectionText">03 / JERARQUÍA Y ÉNFASIS</p>
+                <h2 data-i18n="htmlTextPageHeading">Texto con estructura y énfasis</h2>
+                <p class="intro-lead" data-i18n="htmlTextIntro">Los encabezados crean una jerarquía, los párrafos agrupan ideas y las etiquetas de énfasis resaltan lo importante. Elige cada elemento por su significado, no solo por su apariencia.</p>
+            </header>
+            <section class="note-section" id="text-content">
+                <h2 data-i18n="htmlTextHeading">Organiza el contenido para que se lea mejor</h2>
+                <ul class="concept-list">
+                    <li data-i18n-html="htmlHeadingLevels"><code>&lt;h1&gt;</code> a <code>&lt;h6&gt;</code> organizan los títulos desde el tema principal hasta los subtemas. Mantén el orden lógico y no saltes niveles solo para cambiar el tamaño.</li>
+                    <li data-i18n-html="htmlParagraphMeaning"><code>&lt;p&gt;</code> agrupa una idea o párrafo de texto.</li>
+                    <li data-i18n-html="htmlStrongMeaning"><code>&lt;strong&gt;</code> marca importancia; <code>&lt;em&gt;</code> añade énfasis.</li>
+                    <li data-i18n-html="htmlHrMeaning"><code>&lt;hr&gt;</code> indica un cambio temático entre partes del contenido.</li>
+                </ul>
+                <div class="example-grid text-example-grid" id="text-example">
+                    <div class="code-panel">
+                        <h3 data-i18n="htmlTextCodeTitle">La jerarquía en código</h3>
+                        <pre><code data-i18n="htmlTextExample">&lt;h2&gt;Aprender HTML&lt;/h2&gt;
+&lt;p&gt;Una página se construye paso a paso.&lt;/p&gt;
+&lt;h3&gt;Empieza por la estructura&lt;/h3&gt;
+&lt;p&gt;Usa &lt;strong&gt;etiquetas con significado&lt;/strong&gt;
+  y añade &lt;em&gt;énfasis cuando haga falta&lt;/em&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;Después, sigue con el siguiente tema.&lt;/p&gt;</code></pre>
+                    </div>
+                    <div class="render-panel">
+                        <h3 data-i18n="renderedLabel">Resultado en la página</h3>
+                        <div class="rendered-example hierarchy-preview">
+                            <h2 data-i18n="htmlTextRenderedHeading">Aprender HTML</h2>
+                            <p data-i18n="htmlTextRenderedIntro">Una página se construye paso a paso.</p>
+                            <h3 data-i18n="htmlTextRenderedSubheading">Empieza por la estructura</h3>
+                            <p><span data-i18n="htmlTextRenderedPrefix">Usa</span> <strong data-i18n="htmlTextRenderedStrong">etiquetas con significado</strong> <span data-i18n="htmlTextRenderedConnector">y añade</span> <em data-i18n="htmlTextRenderedEmphasis">énfasis cuando haga falta</em>.</p>
+                            <hr>
+                            <p data-i18n="htmlTextRenderedEnd">Después, sigue con el siguiente tema.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <aside class="learning-callout" id="text-tip">
+                <strong data-i18n="htmlTextTipTitle">Pista de lectura</strong>
+                <p data-i18n="htmlTextTipText">Usa un solo encabezado principal para el tema de la página y organiza las subsecciones con niveles consecutivos.</p>
+            </aside>
+            <nav class="lesson-pagination" aria-label="Navegación entre apuntes" data-i18n-aria-label="htmlPaginationLabel">
+                <a href="structure.html" data-i18n="htmlPreviousStructure">← Anterior: estructura y semántica</a>
+                <a href="links.html" data-i18n="htmlNextLinks">Siguiente: enlaces y rutas →</a>
+            </nav>
+        </article>
+    </main>
+    <footer>
+        <div class="footer-inner">
+            <p data-i18n="footerNote">Hecho a mano con HTML, CSS y JavaScript. Un proyecto de aprendizaje continuo.</p>
+            <a href="https://github.com/F0SK1/CodingNotes" target="_blank" rel="noopener noreferrer" data-i18n="footerGithub">Ver el proyecto en GitHub ↗</a>
+        </div>
+    </footer>
+    <button class="back-to-top" type="button" data-back-to-top data-i18n-aria-label="backToTop" aria-label="Volver arriba" hidden>
+        <svg aria-hidden="true" viewBox="0 0 24 24">
+            <path d="M12 20V5M5 12l7-7 7 7"></path>
+        </svg>
+    </button>
+</body>
+</html>

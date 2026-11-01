@@ -1,24 +1,36 @@
-\# Frontend Notes Web 🚀
+# Frontend Notes Web 🚀
 
-A personal, hand-crafted documentation website and interactive cheat sheet for Frontend Web Development fundamentals (HTML5, CSS3, Layouts &amp; Components). Built \*\*100% autonomously\*\* from scratch to solidify core web concepts.
+A personal, hand-crafted documentation website and interactive cheat sheet for frontend web development fundamentals. Built with vanilla web technologies to support learning through clear explanations and practical examples.
 
---- 
+> **Project status: In progress.** New notes and improvements are added as the learning journey continues.
 
-## 🚀 About the Project 
+## About the project
 
-This project serves as a centralized, self-hosted web documentation hub where I record, structure, and demonstrate everything I learn along my frontend journey. 
+This site is a centralized place to record and demonstrate what I learn throughout my frontend journey. The notes are organized into focused topic pages so each lesson stays easy to scan and revisit.
 
-Instead of relying on passive reading or AI code generation, this website is built line-by-line using vanilla web standards. Each topic features clear explanations written in my own words alongside live, executable code examples. 
+## Project structure
 
---- 
-
-## 📂 Project Structure 
-
-```text 
-CodingNotes/ 
-├── index.html # Homepage with site index and learning progress
-├── style.css # Global stylesheet, design system, and component rules 
-├── assets/ # Images, diagrams, and static media 
-└── pages/ # Dedicated topic pages 
-    ├── html.html # HTML5 semantics, document structure, forms &amp; SEO 
-    └── css.html # CSS Box Model, Specificity, Flexbox &amp; CSS Grid
+```text
+CodingNotes/
+├── index.html                  # Homepage and learning progress
+├── style.css                   # Shared styles and responsive layouts
+├── assets/
+│   └── language.js             # Spanish and English translations
+└── pages/
+    ├── html.html               # HTML topic index
+    ├── html/
+    │   ├── structure.html      # Document structure and semantic elements
+    │   ├── text.html           # Headings, paragraphs, and emphasis
+    │   ├── links.html          # Links and relative paths
+    │   └── lists.html          # Ordered and unordered lists
+    │   └── forms.html          # Forms, labels, and input controls
+    ├── css.html                # CSS topic index
+    ├── css/
+    │   ├── fundamentals.html   # Cascade, specificity, and inheritance
+    │   ├── selectors.html      # Combinators and pseudo-classes
+    │   ├── box-model.html      # Box model and units
+    │   ├── positioning.html    # Overflow, positioning, and stacking
+    │   ├── flexbox.html        # Flexible layouts
+    │   └── responsive.html     # Mobile-first and media queries
+    └── js.html                 # JavaScript notes
+```
