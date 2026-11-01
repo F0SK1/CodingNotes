@@ -6,7 +6,7 @@ A personal, hand-crafted documentation website and interactive cheat sheet for f
 
 ## Live website
 
-Visit the deployed site: [Coding Notes](https://codingnotes-git-main-10-94c7.vercel.app/).
+Visit the deployed site: [Coding Notes](https://codingnotes-10-94c7.vercel.app?_vercel_share=rs2Z9ha2d3ewxldRiCasch7PFVB9zWC6).
 
 ## About the project
 
