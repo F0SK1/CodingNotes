@@ -4,6 +4,10 @@ A personal, hand-crafted documentation website and interactive cheat sheet for f
 
 > **Project status: In progress.** New notes and improvements are added as the learning journey continues.
 
+## Live website
+
+Visit the deployed site: [Coding Notes](https://codingnotes-git-main-10-94c7.vercel.app/).
+
 ## About the project
 
 This site is a centralized place to record and demonstrate what I learn throughout my frontend journey. The notes are organized into focused topic pages so each lesson stays easy to scan and revisit.
